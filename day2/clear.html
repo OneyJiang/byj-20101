@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: pink;
+        }
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+        }
+        .div2 {
+            clear: both;
+        }
+
+
+        .father {
+            background-color: palegoldenrod;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            float: left;
+        }
+        /* .father::before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+        } */
+        .father::after {
+            content: "";
+            display: block;
+            clear: both;
+            /* width: 100px;
+            height: 100px; */
+            /* background-color: seagreen; */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="box">
+        <div class="div1"></div>
+
+        <div class="div2"></div>
+    </div> -->
+
+
+    <div class="father">
+        <div class="child"></div>
+        <p>123</p>
+    </div>
+    
+</body>
+</html>
