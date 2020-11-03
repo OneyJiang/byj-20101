@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            /* padding: 10px 30px 60px 90px; */
+            /* padding: 10px 50px; */
+            padding: 10px 40px 90px;
+            margin-bottom: 50px;
+        }
+        .child {
+            /* width: 100px; */
+            height: 100%;
+            background-color: red;
+        }
+        .father2{
+            width: 300px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .box {
+            width: 282px;
+            border: 1px solid blue;
+        }
+        .box > img {
+            width: 282px;
+            height: 160px;
+        }
+        h3 {
+            margin: 0;
+        }
+        p {
+            margin: 0;
+        }
+        .font-box {
+            padding: 20px;
+            width: 282px;
+            /* border-width: 2px;
+            border-style: solid;
+            border-color: red; */
+
+            /* border: double 10px red; */
+            border-top: solid 2px yellow;
+            /* box-sizing: border-box; */
+        }
+        .img-box{
+            width: 100px;
+            height: 100px;
+            border: solid 1px red;
+            /* overflow: hidden; */
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="img-box">
+        <img src="./images/markdown.png" alt="">
+    </div>
+
+    <div class="father">
+        <div class="child"></div>
+    </div>
+    <div class="father2"></div>
+
+    <!-- <div class="box">
+        <img src="./images/markdown.png" alt=""> -->
+        <div class="font-box">
+            <h3>Java基础课</h3>
+            <p>主要内容：C语言、计算机科学导论、 数据结构与算法、HTTP、HTML...</p>
+        </div>
+    <!-- </div> -->
+
+
+
+    
+</body>
+</html>
