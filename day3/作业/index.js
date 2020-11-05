@@ -29,3 +29,27 @@ for (var i = 0; i < arr.length - 1; i++) {
 }
 console.log('最终得到的排序结果：', arr);
 
+
+
+
+// 
+function getArr(num) {
+    var arr = [];
+    for (j = 2; j <= num; j++) {
+        var flag = '是质数';
+        for(var i = 2; i < j; i++  ){
+            if(j % i == 0){
+                flag = '不是质数';
+            }
+        }
+        if (flag == '是质数') {
+            arr.push(j);
+        }
+    }
+    console.log('质数有', arr);
+}
+
+getArr(10);
+
+
+
