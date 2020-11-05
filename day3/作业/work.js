@@ -77,22 +77,25 @@ function fun2() {
 }
 
 function fun3() {
+    var arr = [];
     for (var i = 2; i < 100; i++) {
         var a = true;
         for (var j = 2; j < i; j++) {
             //判断i能否被j整除
             if (i % j == 0) {
-                //能被整除则说明不是素数，修改布尔值为false
+                //能被整除则说明不是质数，修改布尔值为false
                 a = false;
             }
         }
-        //打印素数
+        // 如果是质数，追加到数组里
         if (a) {
-            console.log(i);
+            arr.push(i);
         }
     }
+    //打印质数数组
+    console.log("所有的质数", arr);
 }
 
 // fun2();
 // console.log('------------------------------------------')
-// fun3();
+fun3();
