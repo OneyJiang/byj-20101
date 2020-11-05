@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" value="123">
+
+    <div id="box1" style="background-color: red;">11111</div>
+    <!-- <p class="font">1111</p>
+    <p class="font">2222</p> -->
+    <p class="font" name="haha">3333</p>
+
+    <script>
+        // console.log(  document.getElementById("box1")   )
+        console.log(  document.getElementsByClassName("font")   )
+        var font = document.getElementsByClassName("font")
+        console.log('font', font[0].style);
+        // console.log('3---',  document.getElementsByName("haha")   )
+        // console.log('4---',  document.getElementsByTagName("p")   )
+        var box1 =  document.getElementById("box1")
+        // console.log(box1.style.backgroundColor);
+        box1.style.backgroundColor = 'blue';
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- 导航 -->
+    <div class="nav">
+        <button onclick="changeNav('home')">首页</button>
+        <button onclick="changeNav('center')">个人中心</button>
+        <!-- <button onclick="changeShow2()">首页</button>
+        <button onclick="changeShow()">个人中心</button> -->
+    </div>
+
+    <!-- 页面主体部分 -->
+    <div class="main">
+
+        <!-- 首页内容 -->
+        <div class="home">
+            <p>首页</p>
+        </div>
+
+        <!-- 个人中心内容 -->
+        <div class="center">
+            <p>个人中心</p>
+        </div>
+    </div>
+
+
+    <script>
+        // 点击个人中心的时候
+        // function changeShow () {
+        //     var home = document.getElementsByClassName("home")[0];
+        //     home.style.display = 'none';
+
+        //     var center = document.getElementsByClassName("center")[0];
+        //     center.style.display = 'block';
+
+        // }
+
+        // function changeShow2 () {
+        //     var home = document.getElementsByClassName("home")[0];
+        //     home.style.display = 'block';
+
+        //     var center = document.getElementsByClassName("center")[0];
+        //     center.style.display = 'none';
+        // }
+
+        function changeNav(name) {
+            console.log('点击的是', name);
+
+            var home = document.getElementsByClassName("home")[0];
+            var center = document.getElementsByClassName("center")[0];
+
+            if (name == 'home') {
+                
+                home.style.display = 'block';
+                center.style.display = 'none';
+
+            } else {
+                
+                home.style.display = 'none';
+                center.style.display = 'block';
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

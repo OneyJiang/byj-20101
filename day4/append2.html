@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .item-pyq{
+            border: solid 1px #f3f3f3;
+            /* border: solid 1px #b2b2b2; */
+            margin: 50px 40px;
+            padding: 20px 10px;
+            border-radius: 10px;
+            box-shadow: 3px 4px 12px #efefef;
+        }
+        .name {
+            font-size: 18px;
+            color: #333;
+        }
+        .text {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+
+
+
+    <script>
+
+        var arr = [
+            {
+                nickname: '小红',
+                text: '今天去旅游了，天气好好啊，真开心，哈哈哈！！'
+            },
+            {
+                nickname: '老王',
+                text: '今天的窗户有点高，风有点大!!!!!!'
+            },
+            {
+                nickname: '宝强',
+                text: '！！！！！！！！！！！！！！！！！！！！！！！！！！'
+            }
+        ]
+
+        console.log('arr', arr);
+
+        var box = $("#box");
+
+        for(var i = 0; i < arr.length; i++) {
+
+            box.append(`
+                <div class="item-pyq">
+                    <p class="name">${ arr[i].nickname }</p>
+                    <p class="text">${ arr[i].text }</p>
+                </div>
+            `)
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
