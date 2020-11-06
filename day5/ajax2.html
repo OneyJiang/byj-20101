@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 引入jquery包 -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+    <ul id="ul">
+        
+    </ul>
+
+    <script>
+
+        var str = 'xiaojiang';
+
+        function fun1 () {
+            var str = '1234567';
+            console.log('fun1的str', str);
+        }
+
+        function fun2 () {
+            console.log('fun2', str)
+        }
+
+        fun2();
+        fun1();
+
+    </script>
+
+
+    <script>
+        var data = [];
+        $.ajax({
+            async: false,
+            url: 'https://www.banyuan.club/api/category/list',
+            type: 'GET',
+            success: function (res) {
+                console.log('res', res);
+                data = res.data.list;
+            },
+            error: function (err) {
+                console.log('err', err);
+            }
+        })
+        var ul = $("#ul");
+        for(var i = 0; i < data.length; i++) {
+            ul.append(`<p>${data[i].title}</p>`)
+        }
+
+    </script>
+    
+</body>
+</html>

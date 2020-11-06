@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 引入jquery包 -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+    <ul id="ul">
+        
+    </ul>
+
+
+    <script>
+
+        $.ajax({
+            url: 'https://www.banyuan.club/api/category/list',
+            type: 'GET',
+            success: function (res) {
+                console.log('res', res);
+                var data = res.data.list;
+                console.log('要循环渲染的数据', data);
+
+                var ul = $("#ul")   //  获取 id为ul的元素， 然后给它添加子元素
+
+                // for循环，循环data数组，
+                // data 是个数组
+                // data[i] 是数组的每一项，是个对象
+                for(var i = 0; i < data.length; i++) {
+                    ul.append(`<p>${data[i].title}</p>`)
+                }
+            },
+            error: function (err) {
+                console.log('err', err);
+            }
+        })
+
+
+
+        // [
+        //     {key:value, key:value},
+        //     {key:value, key:value},
+        //     {key:value, key:value},
+        //     {key:value, key:value}
+        // ]
+
+    </script>
+    
+</body>
+</html>
