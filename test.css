@@ -1,0 +1,44 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:1000px;
+    font-size:0;
+    margin:auto;
+    padding:100px 0;
+}
+
+.item-lesson{
+   width:400px;
+   display:inline-block;
+    margin:0px 50px 70px;
+    vertical-align: top;
+}
+
+.item-box{
+    border:solid 1px #232342;
+    border-radius: 4px;
+    box-shadow: 2px 10px 20px grey;
+}
+
+.item-box img{
+    width:400px;
+    height:200px;
+}
+
+.item-title{
+    line-height:80px;
+    padding-left: 60px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.item-desc{
+    font-size:14px;
+    color:black;
+    line-height:20px;
+    padding-top:14px;
+}
